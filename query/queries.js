@@ -53,7 +53,7 @@ db.restaurants.find({
 }, { _id: 0 }).sort({ cuisine: -1 })
 
 // 14. Trobar restaurant_id, name, borough i cuisine on el nom comença amb 'Wil'.
-
+db.restaurants.find({ name: /^Wil/ }, { _id: 0, restaurant_id: 1, name: 1, borough: 1, cuisine: 1 })
 
 // 15. Trobar restaurant_id, name, borough i cuisine on el nom acaba en 'ces'.
 
