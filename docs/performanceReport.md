@@ -155,3 +155,42 @@
 - ⚠️ Examined 664 docs to return 2 (ratio 332.0:1)
 
 
+15. ## 📊 Query Performance Report
+
+- 🧪 **Query**: `db.restaurants.find({ name: /ces$/ }, { _id: 0, restaurant_id: 1, name: 1, borough: 1, cuisine: 1 })`
+- ⏱️ **Execution time**: 0 ms
+- 📚 **Documents returned**: 2
+- 🔍 **Documents examined**: 664
+- 🛠️ **Execution stage**: PROJECTION_SIMPLE
+
+## 🚨 Performance Issues
+
+### ⚠️ High Priority Issues
+- ⚠️ Examined 664 docs to return 2 (ratio 332.0:1)
+
+
+16. ## 📊 Query Performance Report
+
+- 🧪 **Query**: `db.restaurants.find({ name: /Reg/ }, { _id: 0, restaurant_id: 1, name: 1, borough: 1, cuisine: 1 })`
+- ⏱️ **Execution time**: 0 ms
+- 📚 **Documents returned**: 4
+- 🔍 **Documents examined**: 664
+- 🛠️ **Execution stage**: PROJECTION_SIMPLE
+
+## 🚨 Performance Issues
+
+### ⚠️ High Priority Issues
+- ⚠️ Examined 664 docs to return 4 (ratio 166.0:1)
+
+
+17. ## 📊 Query Performance Report
+
+- 🧪 **Query**: `db.restaurants.find({ borough: "Bronx", cuisine: {$in: ["American", "Chinese"]}}, { _id: 0 })`
+- ⏱️ **Execution time**: 0 ms
+- 📚 **Documents returned**: 22
+- 🔍 **Documents examined**: 54
+- 🛠️ **Execution stage**: PROJECTION_SIMPLE
+
+## ✅ No significant issues detected
+
+
