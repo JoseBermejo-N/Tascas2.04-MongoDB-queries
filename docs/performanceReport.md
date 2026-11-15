@@ -34,7 +34,7 @@
 4. ## 📊 Query Performance Report
 
 - 🧪 **Query**: `db.restaurants.find({}, {  _id: 0, restaurant_id: 1, name: 1, borough: 1, "address.zipcode": 1 })`
-- ⏱️ **Execution time**: 1 ms
+- ⏱️ **Execution time**: 0 ms
 - 📚 **Documents returned**: 664
 - 🔍 **Documents examined**: 664
 - 🛠️ **Execution stage**: PROJECTION_DEFAULT
@@ -188,7 +188,7 @@
 18. ## 📊 Query Performance Report
 
 - 🧪 **Query**: `db.restaurants.find({ borough: {$in: ["Staten Island", "Queens", "Bronx", "Brooklyn"]} },  { _id: 0, restaurant_id: 1, name: 1, borough: 1, cuisine: 1 })`
-- ⏱️ **Execution time**: 1 ms
+- ⏱️ **Execution time**: 0 ms
 - 📚 **Documents returned**: 359
 - 🔍 **Documents examined**: 359
 - 🛠️ **Execution stage**: PROJECTION_SIMPLE
@@ -209,15 +209,12 @@
 
 20. ## 📊 Query Performance Report
 
-- 🧪 **Query**: `db.restaurants.find({ "grades.score": {$not: {$gt: 10}}}, { _id: 0, restaurant_id: 1, name: 1, borough: 1, cuisine: 1 })`
+- 🧪 **Query**: `db.restaurants.find({ "grades.score":{$lte: 10 }}, { _id: 0, restaurant_id: 1, name: 1, borough: 1, cuisine: 1 })`
 - ⏱️ **Execution time**: 1 ms
-- 📚 **Documents returned**: 45
+- 📚 **Documents returned**: 612
 - 🔍 **Documents examined**: 612
 - 🛠️ **Execution stage**: PROJECTION_SIMPLE
 
-## 🚨 Performance Issues
-
-### ⚠️ High Priority Issues
-- ⚠️ Examined 612 docs to return 45 (ratio 13.6:1)
+## ✅ No significant issues detected
 
 
