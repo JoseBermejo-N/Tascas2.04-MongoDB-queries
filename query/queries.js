@@ -51,13 +51,13 @@ db.restaurants.find({ name: /Reg/ }, { _id: 0, restaurant_id: 1, name: 1, boroug
 db.restaurants.find({ borough: "Bronx", cuisine: {$in: ["American", "Chinese"]}}, { _id: 0 })
 
 // 18. Trobar restaurant_id, name, borough i cuisine per a Staten Island, Queens, Bronx o Brooklyn.
-
+db.restaurants.find({ borough: {$in: ["Staten Island", "Queens", "Bronx", "Brooklyn"]} },  { _id: 0, restaurant_id: 1, name: 1, borough: 1, cuisine: 1 })
 
 // 19. Trobar restaurant_id, name, borough i cuisine per a restaurants que NO són d'aquests barris.
-
+db.restaurants.find({ borough: {$nin: ["Staten Island", "Queens", "Bronx", "Brooklyn"]} },  { _id: 0, restaurant_id: 1, name: 1, borough: 1, cuisine: 1 })
 
 // 20. Trobar restaurant_id, name, borough i cuisine amb marcador no superior a 10.
-
+db.restaurants.find({ "grades.score": {$not: {$gt: 10}}}, { _id: 0, restaurant_id: 1, name: 1, borough: 1, cuisine: 1 })
 
 // 21. Trobar restaurants que preparen peix, no 'American' ni 'Chinees', o nom comença amb 'Wil'.
 
