@@ -144,29 +144,23 @@
 14. ## 📊 Query Performance Report
 
 - 🧪 **Query**: `db.restaurants.find({ name: /^Wil/ }, { _id: 0, restaurant_id: 1, name: 1, borough: 1, cuisine: 1 })`
-- ⏱️ **Execution time**: 1 ms
+- ⏱️ **Execution time**: 0 ms
 - 📚 **Documents returned**: 2
-- 🔍 **Documents examined**: 664
+- 🔍 **Documents examined**: 2
 - 🛠️ **Execution stage**: PROJECTION_SIMPLE
 
-## 🚨 Performance Issues
-
-### ⚠️ High Priority Issues
-- ⚠️ Examined 664 docs to return 2 (ratio 332.0:1)
+## ✅ No significant issues detected
 
 
 15. ## 📊 Query Performance Report
 
 - 🧪 **Query**: `db.restaurants.find({ name: /ces$/ }, { _id: 0, restaurant_id: 1, name: 1, borough: 1, cuisine: 1 })`
-- ⏱️ **Execution time**: 1 ms
+- ⏱️ **Execution time**: 0 ms
 - 📚 **Documents returned**: 2
-- 🔍 **Documents examined**: 664
+- 🔍 **Documents examined**: 2
 - 🛠️ **Execution stage**: PROJECTION_SIMPLE
 
-## 🚨 Performance Issues
-
-### ⚠️ High Priority Issues
-- ⚠️ Examined 664 docs to return 2 (ratio 332.0:1)
+## ✅ No significant issues detected
 
 
 16. ## 📊 Query Performance Report
@@ -174,13 +168,10 @@
 - 🧪 **Query**: `db.restaurants.find({ name: /Reg/ }, { _id: 0, restaurant_id: 1, name: 1, borough: 1, cuisine: 1 })`
 - ⏱️ **Execution time**: 0 ms
 - 📚 **Documents returned**: 4
-- 🔍 **Documents examined**: 664
+- 🔍 **Documents examined**: 4
 - 🛠️ **Execution stage**: PROJECTION_SIMPLE
 
-## 🚨 Performance Issues
-
-### ⚠️ High Priority Issues
-- ⚠️ Examined 664 docs to return 4 (ratio 166.0:1)
+## ✅ No significant issues detected
 
 
 17. ## 📊 Query Performance Report
@@ -197,7 +188,7 @@
 18. ## 📊 Query Performance Report
 
 - 🧪 **Query**: `db.restaurants.find({ borough: {$in: ["Staten Island", "Queens", "Bronx", "Brooklyn"]} },  { _id: 0, restaurant_id: 1, name: 1, borough: 1, cuisine: 1 })`
-- ⏱️ **Execution time**: 0 ms
+- ⏱️ **Execution time**: 1 ms
 - 📚 **Documents returned**: 359
 - 🔍 **Documents examined**: 359
 - 🛠️ **Execution stage**: PROJECTION_SIMPLE
@@ -219,7 +210,7 @@
 20. ## 📊 Query Performance Report
 
 - 🧪 **Query**: `db.restaurants.find({ "grades.score": {$not: {$gt: 10}}}, { _id: 0, restaurant_id: 1, name: 1, borough: 1, cuisine: 1 })`
-- ⏱️ **Execution time**: 2 ms
+- ⏱️ **Execution time**: 1 ms
 - 📚 **Documents returned**: 45
 - 🔍 **Documents examined**: 612
 - 🛠️ **Execution stage**: PROJECTION_SIMPLE
